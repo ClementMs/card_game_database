@@ -1,6 +1,5 @@
 # Example dbt_project.yml file
 name: 'card_game'
-version: 1
 
 #profile: card_game
 
