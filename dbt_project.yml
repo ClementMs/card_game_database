@@ -1,0 +1,20 @@
+# Example dbt_project.yml file
+name: 'card_game'
+version: 1
+
+#profile: card_game
+
+dbt-cloud:
+    project-id: 70471823443890
+
+
+models: 
+
+    card_game:
+        livestream_views_events: view
+
+    
+
+    
+
+    
