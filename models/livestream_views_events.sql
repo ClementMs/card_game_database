@@ -1,3 +1,8 @@
+{{ config(
+          materialized='view'
+) }}
+
+
 WITH previous_event_table AS (
 
 
@@ -71,4 +76,4 @@ FROM livestream_video_view_duration_second_table
 
 ORDER BY user_id, timestamp_utc, message_type_id
 
-;
+
