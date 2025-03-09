@@ -65,15 +65,14 @@ SELECT
 FROM time_elapsed_between_viewer_interactions_table 
 
 
-),
+)
 
 SELECT
 
 *
 
-FROM livestream_video_view_duration_second_table
+FROM livestream_video_view_duration_first_table
 
 
 ORDER BY user_id, timestamp_utc, message_type_id
-
 
