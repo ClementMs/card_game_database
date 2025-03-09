@@ -10,7 +10,14 @@ dbt-cloud:
 models: 
 
     card_game:
-        livestream_views_events: view
+
+        #by default will use the schema  dbt_cmsika
+
+        livestream_views_events:
+            +materialized: view
+
+        card_round_duration_game: 
+            +materialized: view
 
     
 
