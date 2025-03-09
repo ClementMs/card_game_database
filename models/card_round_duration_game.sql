@@ -4,7 +4,7 @@
 
 
 
-WITH first_table AS (
+WITH min_max_card_round_user_table AS (
 
 SELECT
 
@@ -24,7 +24,7 @@ GROUP BY 1,2,3
 
 ),
 
-second_table AS (
+user_card_round_duration_table AS (
 
 SELECT
 
@@ -32,7 +32,7 @@ SELECT
     game_id,
     TIMESTAMPDIFF(SECOND, card_round_start, card_round_end) AS card_round_duration
 
-FROM first_table
+FROM min_max_card_round_user_table
 
 
 
@@ -51,7 +51,7 @@ SELECT
 
 
 
-FROM second_table a
+FROM user_card_round_duration_table a
 
 INNER JOIN cards_analytics.dev.games b ON b.game_id = a.game_id
 
