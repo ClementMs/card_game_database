@@ -1,5 +1,5 @@
 
-{{config( materialized='view' )}}
+{{config( materialized='table' )}}
 
 WITH vue_test AS (
 
