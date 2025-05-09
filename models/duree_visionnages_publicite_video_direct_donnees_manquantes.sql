@@ -148,12 +148,12 @@ SELECT
 
     a.user_id,
 
-    a.session_start AS fin_visionnage_publicite_video_direct,
+    a.session_start AS debut_visionnage_publicite_video_direct,
 
     CASE
     WHEN MAX(a.evenement_successif_horodatage) IS NULL THEN a.session_start
     ELSE MAX(a.evenement_successif_horodatage) 
-    END AS debut_visionnage_publicite_video_direct,
+    END AS fin_visionnage_publicite_video_direct,
 
 
 FROM donnees_manquantes_jointure_evenements_successifs a
