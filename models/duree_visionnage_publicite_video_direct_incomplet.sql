@@ -22,7 +22,7 @@ FROM dev.card_game_events a
 
 LEFT JOIN dev.card_game_events b ON b.season_id = a.season_id AND b.game_id = a.game_id AND b.user_id = a.user_id AND a.timestamp_utc < b.timestamp_utc
 
-WHERE a.user_id = '8303228580898163950'
+-- WHERE a.user_id = '8303228580898163950'
 
 ORDER BY 1,2,3,4,5
 
@@ -100,7 +100,7 @@ SELECT
 
 FROM dev.card_game_events
 
-WHERE user_id = '8303228580898163950'
+-- WHERE user_id = '8303228580898163950'
 
 GROUP BY 1,2,3
 
