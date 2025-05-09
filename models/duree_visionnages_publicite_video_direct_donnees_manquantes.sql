@@ -20,7 +20,7 @@ FROM dev.card_game_events a
 
 LEFT JOIN dev.card_game_events b ON b.season_id = a.season_id AND b.game_id = a.game_id AND b.user_id = a.user_id AND a.timestamp_utc < b.timestamp_utc
 
-WHERE a.user_id = '8303228580898163950'
+-- WHERE a.user_id = '8303228580898163950'
 
 ORDER BY 1,2,3,4,5
 
@@ -112,7 +112,7 @@ FROM donnees_manquantes a
 
 LEFT JOIN dev.card_game_events b ON b.season_id = a.season_id AND b.game_id = a.game_id AND b.user_id = a.user_id AND a.session_start < b.timestamp_utc
 
-WHERE a.user_id = '8303228580898163950'
+-- WHERE a.user_id = '8303228580898163950'
 
 ),
 
@@ -131,9 +131,9 @@ FROM donnees_manquantes_jointure_evenements_successifs a
 
 LEFT JOIN dev.card_game_events b ON b.season_id = a.season_id AND b.game_id = a.game_id AND b.user_id = a.user_id AND a.evenement_successif_horodatage < b.timestamp_utc
 
-WHERE a.user_id = '8303228580898163950'
+-- WHERE a.user_id = '8303228580898163950'
 
-AND TIMESTAMPDIFF(SECONDS, evenement_successif_horodatage, b.timestamp_utc) / 60 > 30
+WHERE TIMESTAMPDIFF(SECONDS, evenement_successif_horodatage, b.timestamp_utc) / 60 > 30
 
 
 ),
