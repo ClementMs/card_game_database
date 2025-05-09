@@ -200,7 +200,7 @@ SELECT
     a.session_end,
     a.intervalle_temps_previous_session_end_current_session_start,
     a.next_timestamp,
-    CASE WHEN a.session_id IS NULL THEN 1 ELSE 0 END AS donnees_manquantes
+    CASE WHEN a.session_end IS NULL THEN 1 ELSE 0 END AS donnees_manquantes
   --  TIMESTAMPDIFF(SECOND, a.next_timestamp, a.session_end) / 60 AS session_duration
 
 FROM third_events_table a
