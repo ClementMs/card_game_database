@@ -143,8 +143,6 @@ INNER JOIN dev.card_game_events b ON b.event_id = a.id_evenement_successif_fin_s
 
 INNER JOIN dev.card_game_events c ON c.event_id = a.id_evenement_debut_scene_publicite_video
 
--- ORDER BY 1,2
-
 ),
 
 evenement_predit_premiere_vue AS (
