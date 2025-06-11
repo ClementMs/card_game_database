@@ -19,7 +19,6 @@ models:
         card_round_duration_game: 
             +materialized: view
 
-    
 
     
 
